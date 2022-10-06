@@ -15,8 +15,8 @@ import { NewCycleForm } from './components/NewCycleForm'
 import { CyclesContext } from '../../contexts/CycleContext'
 
 const newCycleFormValidationSchema = zod.object({
-  task: zod.string().min(1, 'Informe a tarefa'),
-  minutesAmount: zod.number().min(1).max(60),
+  task: zod.string().min(5, 'Informe a tarefa'),
+  minutesAmount: zod.number().min(5).max(60),
 })
 
 type NewCycleFormData = zod.infer<typeof newCycleFormValidationSchema>
